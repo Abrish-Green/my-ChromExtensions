@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "My Toolbox",
+  "version": "0.5.1",
+  "description": "Per-tab auto-close: switch it on and the tab closes when the countdown ends.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["storage", "alarms"],
+  "action": {
+    "default_title": "My Toolbox",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": { "default": "Alt+Shift+T" },
+      "description": "Open My Toolbox"
+    }
+  }
+}

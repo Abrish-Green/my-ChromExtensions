@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>My Toolbox</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <div id="timeLeft" class="time-left off">--:--</div>
+    <div id="timeLabel" class="time-label">Auto-close is off for this tab</div>
+  </header>
+
+  <div id="autoBox" class="auto">
+    <div class="auto-row">
+      <label class="switch" title="Turn auto-close on or off for this tab">
+        <input id="autoToggle" type="checkbox">
+        <span class="slider"></span>
+      </label>
+      <div class="auto-text">
+        <strong>Auto-close this tab</strong>
+        <span id="autoState">Off: this tab stays open</span>
+      </div>
+    </div>
+
+    <div class="auto-row minutes-row">
+      <span class="minutes-label">Countdown length</span>
+      <input id="autoMinutes" type="number" min="1" max="1440" value="60" title="Minutes until the tab closes">
+      <span class="unit">min</span>
+      <button id="saveMinutes" type="button" title="Save the length. If a countdown is running, it restarts with the new length.">Save</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
